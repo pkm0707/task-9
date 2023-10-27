@@ -1,42 +1,41 @@
-function add()
+let list1 = [];
+let list2 = [];
+let list3 = [];
+let list4 = [];
+let list5 = [];
+let list6 = [];
+let list7 = [];
+let list8 = [];
+let n = 1;
+let x = 0;
+function AddRow()
 {
-    let a = document.getElementById("first").value
-    let b = document.getElementById("second").value
-    let output = Number(a) + Number(b)
-    document.getElementsByClassName("Result")[0].innerText = `The addition of two number is ${output}`
+    let addrow = document.getElementById("tb");
+    let newrow= addrow.insertRow(n);
+    list1[x] = document.getElementById("fname").value;
+    list2[x] = document.getElementById("lname").value;
+    list3[x] = document.getElementById("address").value;
+    list4[x] = document.getElementById("pincode").value;
+    list5[x] = document.getElementById("gender").value;
+    list6[x] = document.getElementById("food").value;
+    list7[x] = document.getElementById("state").value;
+    list8[x] = document.getElementById("country").value;
+    let cell1 = newrow.insertCell(0);
+    let cell2 = newrow.insertCell(1);
+    let cell3 = newrow.insertCell(2);
+    let cell4 = newrow.insertCell(3);
+    let cell5 = newrow.insertCell(4);
+    let cell6 = newrow.insertCell(5);
+    let cell7 = newrow.insertCell(6);
+    let cell8 = newrow.insertCell(7);
+    cell1.innerHTML = list1[x];
+    cell2.innerHTML = list2[x];
+    cell3.innerHTML = list3[x];
+    cell4.innerHTML = list4[x];
+    cell5.innerHTML = list5[x];
+    cell6.innerHTML = list6[x];
+    cell7.innerHTML = list7[x];
+    cell8.innerHTML = list8[x];
+    n++;
+    x++;
 }
-function sub()
-{
-    let a = document.getElementById("first").value
-    let b = document.getElementById("second").value
-    let output = Number(a) - Number(b)
-    document.getElementsByClassName("Result")[0].innerText = `The subraction of two number is ${output}`
-}
-function mul()
-{
-    let a = document.getElementById("first").value
-    let b = document.getElementById("second").value
-    let output = Number(a) * Number(b)
-    document.getElementsByClassName("Result")[0].innerText = `The multiplication of two number is ${output}`
-}
-function div()
-{
-    let a = document.getElementById("first").value
-    let b = document.getElementById("second").value
-    let output = Number(a) / Number(b)
-    document.getElementsByClassName("Result")[0].innerText = `The division of two number is ${output}`
-}
-function rem()
-{
-    let a = document.getElementById("first").value
-    let b = document.getElementById("second").value
-    let output = Number(a) % Number(b)
-    document.getElementsByClassName("Result")[0].innerText = `The reminder of two number is ${output}`
-}
-function ct()
-{
-    document.getElementById("time").innerHTML = Date()
-}
-let x = prompt("enter your name")
-let y = prompt("age")
-alert('Your ready to use calculator')
