@@ -1,41 +1,32 @@
-let list1 = [];
-let list2 = [];
-let list3 = [];
-let list4 = [];
-let list5 = [];
-let list6 = [];
-let list7 = [];
-let list8 = [];
-let n = 1;
-let x = 0;
-function AddRow()
+var tbody = document.getElementById("tbody") 
+function createtablerow()
 {
-    let addrow = document.getElementById("tb");
-    let newrow= addrow.insertRow(n);
-    list1[x] = document.getElementById("fname").value;
-    list2[x] = document.getElementById("lname").value;
-    list3[x] = document.getElementById("address").value;
-    list4[x] = document.getElementById("pincode").value;
-    list5[x] = document.getElementById("gender").value;
-    list6[x] = document.getElementById("food").value;
-    list7[x] = document.getElementById("state").value;
-    list8[x] = document.getElementById("country").value;
-    let cell1 = newrow.insertCell(0);
-    let cell2 = newrow.insertCell(1);
-    let cell3 = newrow.insertCell(2);
-    let cell4 = newrow.insertCell(3);
-    let cell5 = newrow.insertCell(4);
-    let cell6 = newrow.insertCell(5);
-    let cell7 = newrow.insertCell(6);
-    let cell8 = newrow.insertCell(7);
-    cell1.innerHTML = list1[x];
-    cell2.innerHTML = list2[x];
-    cell3.innerHTML = list3[x];
-    cell4.innerHTML = list4[x];
-    cell5.innerHTML = list5[x];
-    cell6.innerHTML = list6[x];
-    cell7.innerHTML = list7[x];
-    cell8.innerHTML = list8[x];
-    n++;
-    x++;
+    var tr = document.createElement("tr")
+    var td1 = document.createElement("td")
+    var td2 = document.createElement("td")
+    var td3 = document.createElement("td")
+    var td4 = document.createElement("td")
+    var td5 = document.createElement("td")
+    var td6 = document.createElement("td")
+    var td7 = document.createElement("td")
+    var td8 = document.createElement("td")
+    var fname = document.getElementById("fname").value 
+    var lname = document.getElementById("lname").value 
+    var address = document.getElementById("address").value 
+    var pincode = document.getElementById("pincode").value 
+    var gender = document.getElementById("gender").value 
+    var food = document.getElementById("food").value 
+    var state = document.getElementById("state").value 
+    var country = document.getElementById("country").value
+    td1.innerHTML = fname
+    td2.innerHTML = lname
+    td3.innerHTML = address
+    td4.innerHTML = pincode
+    td5.innerHTML = gender
+    td6.innerHTML = food
+    td7.innerHTML = state
+    td8.innerHTML = country
+    console.log(td1,td2,td3,td4,td5,td6,td7,td8)
+    tr.append(td1,td2,td3,td4,td5,td6,td7,td8)
+    tbody.append(tr)
 }
