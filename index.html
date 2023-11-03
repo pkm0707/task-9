@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="container" style="margin: 20px;background-color:grey;border:5px solid black;padding:20px;">
@@ -56,11 +55,11 @@
                 <input type="text" class="form-control" id="country" required>
             </div>
             <div class="col-10">
-              <button type="submit" class="btn btn-primary" onclick="AddRow()" style="cursor:pointer;">Submit</button>
+              <button type="submit" class="btn btn-primary" onclick="createtablerow()" style="cursor:pointer;">Submit</button>
             </div>
         </form>
     </div>
-    <table id="tb">
+    <table id="table">
         <thead>
             <tr>
                 <th>Fname</th>
@@ -73,6 +72,10 @@
                 <th>Country</th>
             </tr>
         </thead>
+        <tbody id="tbody">
+
+        </tbody>
     </table>
+    <script src="script.js"></script>
 </body>
 </html>
